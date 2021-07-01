@@ -1,84 +1,88 @@
 <html>
-	<head>
-		<title>LS Auction House</title>
-		<link rel="stylesheet" href="normalize.css">
-		<link rel="stylesheet" href="skeleton.css">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<br>
-			<br>
-		<div class="container" text-align="center">
-			<img class="center" src="text5089-6.png" alt="LS Auction House" width="286" height="120"/>
-		</div>
-		<p></p>
-		
-		<br>
-		<br>
-			<div class="container">
-			<p>Pour inscrire un lot, contactez Marek via les informations suivantes en précisant la nature du lot,</p><p>une breve description et un prix de départ. Vous serez ensuite recontacté pour discuter de votre lot.</p>
-			<br>
-			<p>Marek Valhenson</p><p>555-3463</p><p>marek.valhenson@discord.gg</p>
-		</div>
-		
-		<br>
 
-		<div class="container">
-			<strong>Liste des lots pour la vente du <em>à definir</em></strong>
-			<p></p>
-			<table class="u-full-width">
-				<thead>
-				  <tr>
+<head>
+	<title>LS Auction House</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="skeleton.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<br>
+	<br>
+	<div class="container" text-align="center">
+		<img class="center" src="text5089-6.png" alt="LS Auction House" width="286" height="120" />
+	</div>
+	<p></p>
+	<br>
+	<br>
+	<div class="container">
+		<p>Pour inscrire un lot, contactez Marek via les informations suivantes en précisant la nature du lot,</p>
+		<p>une breve description et un prix de départ. Vous serez ensuite recontacté pour discuter de votre lot.</p>
+		<br>
+		<p>Marek Valhenson</p>
+		<p>555-3463</p>
+		<p>marek.valhenson@discord.gg</p>
+	</div>
+	<br>
+	<div class="container">
+		<strong>Liste des lots pour la vente du <em>à definir</em></strong>
+		<p></p>
+		<table class="u-full-width">
+			<thead>
+				<tr>
 					<th>Lot</th>
 					<th>Description</th>
 					<th>Prix de départ</th>
 					<th>Vendeur</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
 					<td>FCR1000</td>
-					<td>Moto vintage au design café racer avec un son tres caracteristique, <em>Full Custo + Turbo</em> </td>
+					<td>Moto vintage au design café racer avec un son tres caracteristique, <em>Full Custo + Turbo</em>
+					</td>
 					<td>25000 $</td>
 					<td>Lewis Bolton</td>
-				  </tr>
-				  <tr>
+				</tr>
+				<tr>
 					<td>Sultan</td>
 					<td>Vehicule sport iconique, 4 portes, <em>Moteur 1 + Full Esthetique</em> </td>
-					<td>55000 $</td>
+					<td>37000 $</td>
 					<td><i>Anonyme</i></td>
-				  </tr>
-				</tbody>
-			  </table>
-		</div>
-		<div class = "container">
-			<p></p>
-			<strong>Calculateur</strong>
-			<p></p>
-			<p>Entrez le prix final estimé pour connaite le taux de comission</p>
-			<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000" oninput="vchange(this)" /></div>
-			<div><label>Pourcentage   (%)</label><input id="percent" disabled placeholder="10"/></div>
-			<div><label>Comission     ($)</label><input id="com" disabled placeholder="2000"/></div>
-			<p></p>
-			<p class="light">Le pourcentage est dégréssif de 10% à 5% en fonction du prix de vente.</p>
-		</div>
-		<script>
-			const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-			const lerp = (v0, v1, t) => (1 - t) * v0 + t * v1;
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<p></p>
+		<strong>Calculateur</strong>
+		<p></p>
+		<p>Entrez le prix final estimé pour connaite le taux de comission</p>
+		<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000" oninput="vchange(this)" /></div>
+		<div><label>Pourcentage (%)</label><input id="percent" disabled placeholder="10" /></div>
+		<div><label>Comission ($)</label><input id="com" disabled placeholder="2000" /></div>
+		<p></p>
+		<p class="light">Le pourcentage est dégréssif de 10% à 5% en fonction du prix de vente.</p>
+	</div>
+	<script>
+		const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+		const lerp = (v0, v1, t) => (1 - t) * v0 + t * v1;
 
-			 function vchange(e){ 
-				let price = e.value;
-				let minprice = 20000; let maxprice = 75000;
-				let minper = 10; let maxper = 5;
+		function vchange(e) {
+			let price = e.value;
+			let minprice = 20000; 
+			let maxprice = 75000;
+			let minper = 10; 
+			let maxper = 5;
+			let clampprice = clamp(price, minprice, maxprice);
+			let new_value = ((clampprice - minprice) / (maxprice - minprice)) * (maxper - minper) + minper;
+			new_value = new_value.toFixed(1)
 
-				let clampprice = clamp(price, minprice, maxprice);
-				let new_value = ( (clampprice - minprice) / (maxprice - minprice) ) * (maxper - minper) + minper;
-				new_value = new_value.toFixed(1)
-				document.getElementById("percent").value = new_value;
-				document.getElementById("com").value = ((new_value/100) * price).toFixed(0);
+			document.getElementById("percent").value = new_value;
+			document.getElementById("com").value = ((new_value / 100) * price).toFixed(0);
+		};
+	</script>
+</body>
 
-
-				};
-		</script>
-	</body>
 </html>
