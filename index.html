@@ -58,6 +58,12 @@
 					<td>25000 $</td>
 					<td><i>Anonyme</i></td>
 				</tr>
+				<tr>
+					<td>Faction Custom</td>
+					<td>Grosse cylindrée performante, tres à l'aise sur toutes les routes, 4 portes, <em>Full Custo + Blindage 2</em> </td>
+					<td>20000 $</td>
+					<td>Al Dan</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
@@ -67,8 +73,8 @@
 		<p></p>
 		<p>Entrez le prix final estimé pour connaitre le taux de comission</p>
 		<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000" oninput="vchange(this)" /></div>
-		<div><label>Pourcentage (%)</label><input id="percent" disabled placeholder="8" /></div>
-		<div><label>Comission ($)</label><input id="com" disabled placeholder="1600" /></div>
+		<div><label>Pourcentage</label><input id="percent" disabled placeholder="8 %" /></div>
+		<div><label>Comission</label><input id="comission" disabled placeholder="1600 $" /></div>
 		<p></p>
 		<p class="light">Le pourcentage est dégréssif de 8% à 2% en fonction du prix de vente. Il s'agit d'un pourcentage indicatif, qui peut être réévalué et négocié.</p>
 	</div>
@@ -78,16 +84,16 @@
 
 		function vchange(e) {
 			let price = e.value;
-			let minprice = 20000; 
+			let minprice = 20000;
 			let maxprice = 100000;
-			let minper = 8; 
+			let minper = 8;
 			let maxper = 2;
 			let clampprice = clamp(price, minprice, maxprice);
 			let new_value = ((clampprice - minprice) / (maxprice - minprice)) * (maxper - minper) + minper;
 			new_value = new_value.toFixed(1)
 
-			document.getElementById("percent").value = new_value;
-			document.getElementById("com").value = ((new_value / 100) * price).toFixed(0);
+			document.getElementById("percent").value = new_value + " %";
+			document.getElementById("comission").value = ((new_value / 100) * price).toFixed(0) + " $";
 		};
 	</script>
 </body>
