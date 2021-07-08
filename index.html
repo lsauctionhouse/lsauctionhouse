@@ -37,7 +37,10 @@
 					</div>
 					<div class="col s10">
 						<h5>Vente #1 du 13 Juillet 2021</h5>
-						<span>La vente se déroulera à partir de 21h, au vignoble Marlowe. L'accueil des invités se fera dès 20h30. Quelques verres vous seront offerts avant et pendant l'événement et une soirée se déroulera sur les lieux à la fin des ventes. Les règles des ventes vous seront exposés sur place.</span>
+						<span>La vente se déroulera à partir de 21h, au vignoble Marlowe. L'accueil des invités se fera
+							dès 20h30. Quelques verres vous seront offerts avant et pendant l'événement et une soirée se
+							déroulera sur les lieux à la fin des ventes. Les règles des ventes vous seront exposés sur
+							place.</span>
 					</div>
 				</div>
 			</div>
@@ -109,7 +112,9 @@
 							<i class="material-icons medium">info</i>
 						</div>
 						<div class="col">
-							<span class="white-text">Pour inscrire un lot, contactez Marek en précisant la nature du lot, une brève description et un prix de départ. Vous serez ensuite recontacté pour discuter de votre lot.</span>
+							<span class="white-text">Pour inscrire un lot, contactez Marek en précisant la nature du
+								lot, une brève description et un prix de départ. Vous serez ensuite recontacté pour
+								discuter de votre lot.</span>
 						</div>
 					</div>
 				</div>
@@ -124,13 +129,14 @@
 					<div class="card-content black-text">
 						<span class="card-title">Calculateur</span>
 						<span>Entrez le prix final estimé pour connaitre le taux de commission.</span><br>
-						<span>Le pourcentage est dégressif de 8% à 2% en fonction du prix de vente. Il s'agit d'un pourcentage indicatif, qui peut être réévalué et négocié.</span>
+						<span>Le pourcentage est dégressif de 8% à 2% en fonction du prix de vente. Il s'agit d'un
+							pourcentage indicatif, qui peut être réévalué et négocié.</span>
 					</div>
 					<div class="card-action">
 						<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000"
 								oninput="vchange(this)" /></div>
 						<div><label>Pourcentage</label><input id="percent" disabled placeholder="8 %" /></div>
-						<div><label>Comission</label><input id="comission" disabled placeholder="1600 $" /></div>
+						<div><label>Commission</label><input id="commission" disabled placeholder="1600 $" /></div>
 					</div>
 				</div>
 			</div>
@@ -152,7 +158,7 @@
 			new_value = new_value.toFixed(1)
 
 			document.getElementById("percent").value = new_value + " %";
-			document.getElementById("comission").value = ((new_value / 100) * price).toFixed(0) + " $";
+			document.getElementById("commission").value = ((new_value / 100) * price).toFixed(0) + " $";
 		};
 	</script>
 </body>
