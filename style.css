@@ -1,6 +1,6 @@
 
 em {
-	color: #b33636;
+	color: #42a5f5 ;
   }
 
   .center {
@@ -22,3 +22,10 @@ label {
 	width: 135px;
 	text-align: left;
   }
+
+  input {
+	  color: #333;
+  }
+
+
+

@@ -2,8 +2,17 @@
 
 <head>
 	<title>LS Auction House</title>
+	<!--
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="skeleton.css">
+	-->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,18 +24,30 @@
 	<p></p>
 	<br>
 	<div class="container">
-		<p>Pour inscrire un lot, contactez Marek via les informations suivantes en précisant la nature du lot,</p>
-		<p>une breve description et un prix de départ. Vous serez ensuite recontacté pour discuter de votre lot.</p>
-		<br>
-		<p>Marek Valhenson</p>
-		<p>555-3463</p>
-		<p>marek.valhenson@discord.gg</p>
+		<p class="center">Marek Valhenson - 555-3463 - marek.valhenson@discord.gg</p>
 	</div>
+
 	<br>
+
 	<div class="container">
-		<strong>Liste des lots pour la vente du <em>à definir</em></strong>
-		<p></p>
-		<table class="u-full-width">
+		<div class="col s12 m8 offset-m2 l6 offset-l3 ">
+			<div class="card-panel grey lighten-5 z-depth-1">
+				<div class="row valign-wrapper">
+					<div class="col s2">
+						<img src="vinsq.jpg" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+					</div>
+					<div class="col s10">
+						<h5>Vente #1 du 13 Juillet 2021</h5>
+						<span>La vente se déroulera à partir de 21h, au vignoble Marlowe. L'accueil des invités se fera
+							des 20h30.</span>
+						<span>Quelques verres vous seront offert avant et pendant l'évenement, et une soirée se
+							déroulera sur les lieux à la fin des ventes.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<table class="striped responsive-table">
 			<thead>
 				<tr>
 					<th>Lot</th>
@@ -36,12 +57,6 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>FCR1000</td>
-					<td>Moto vintage au design café racer avec un son tres caracteristique, <em>Full Custo + Turbo</em>	</td>
-					<td>25000 $</td>
-					<td>Lewis Bolton</td>
-				</tr>
 				<!-- Retrait a la demande du clioent
 				<tr>
 					<td>Sultan</td>
@@ -51,43 +66,85 @@
 				</tr>
 				-->
 				<tr>
+					<td>FCR1000</td>
+					<td>Moto vintage au design café racer avec un son tres caracteristique, <em>Full Perf + Turbo</em>
+					</td>
+					<td>25000 $</td>
+					<td>Lewis Bolton</td>
+				</tr>
+				<tr>
 					<td>Tailgater</td>
-					<td>Vehicule allemand luxueux et performant, 4 portes, <em>Full Custo + Blindage 2</em> </td>
+					<td>Vehicule allemand luxueux et performant, 4 portes, <em>Full Perf + Blindage 2</em> </td>
 					<td>25000 $</td>
 					<td><i>Anonyme</i></td>
 				</tr>
 				<tr>
 					<td>Faction Custom</td>
-					<td>Grosse cylindrée performante, tres à l'aise sur toutes les routes, 4 portes, <em>Full Custo + Blindage 2</em> </td>
+					<td>Grosse cylindrée performante, tres à l'aise sur toutes les routes, 4 portes, <em>Full Perf +
+							Blindage 2</em> </td>
 					<td>20000 $</td>
 					<td>Al Dan</td>
 				</tr>
 				<tr>
-					<td>Zombie Chopper</td>
-					<td>Une moto chopper iconique avec un gros moteur et son ronronement des plus agréables <em>Full Custo</em> </td>
-					<td>55000 $</td>
-					<td>Anonyme</td>
-				</tr>
-				<tr>
 					<td>Wolfsbane</td>
-					<td>Moto chopper classique <em>Full Custo</em> </td>
+					<td>Moto chopper classique, <em>Full Perf</em> </td>
 					<td>10000 $</td>
 					<td>Miguel Delavegas</td>
 				</tr>
+				<tr>
+					<td>Zombie Chopper</td>
+					<td>Une moto chopper iconique avec un gros moteur et son ronronement des plus agréables, <em>Full
+							Perf</em> </td>
+					<td>52000 $</td>
+					<td><i>Anonyme</i></td>
+				</tr>
 			</tbody>
 		</table>
+		<br>
 	</div>
+
 	<div class="container">
-		<p></p>
-		<strong>Calculateur</strong>
-		<p></p>
-		<p>Entrez le prix final estimé pour connaitre le taux de comission</p>
-		<p class="light">Le pourcentage est dégréssif de 8% à 2% en fonction du prix de vente. Il s'agit d'un pourcentage indicatif, qui peut être réévalué et négocié.</p>
-		<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000" oninput="vchange(this)" /></div>
-		<div><label>Pourcentage</label><input id="percent" disabled placeholder="8 %" /></div>
-		<div><label>Comission</label><input id="comission" disabled placeholder="1600 $" /></div>
-		<p></p>
+		<div class="row">
+			<div class="col s12 m8 offset-m2 l6 offset-l3">
+				<div class="card-panel teal lighten-2">
+					<br>
+					<div class="row valign-wrapper">
+						<div class="col white-text">
+							<i class="material-icons medium">info</i>
+						</div>
+						<div class="col">
+							<span class="white-text">
+								Pour inscrire un lot, contactez Marek en précisant la nature du lot, une
+								breve description et un prix de départ. Vous serez ensuite recontacté pour discuter de
+								votre lot.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m8 offset-m2 l6 offset-l3">
+				<div class="card grey lighten-5 z-depth-1 hoverable">
+					<div class="card-content black-text">
+						<span class="card-title">Calculateur</span>
+						<span>Entrez le prix final estimé pour connaitre le taux de comission</span><br>
+						<span>Le pourcentage est dégréssif de 8% à 2% en fonction du prix de vente. Il s'agit d'un
+							pourcentage indicatif, qui peut être réévalué et négocié.</span>
+					</div>
+					<div class="card-action">
+						<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000"
+								oninput="vchange(this)" /></div>
+						<div><label>Pourcentage</label><input id="percent" disabled placeholder="8 %" /></div>
+						<div><label>Comission</label><input id="comission" disabled placeholder="1600 $" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script>
 		const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 		const lerp = (v0, v1, t) => (1 - t) * v0 + t * v1;
