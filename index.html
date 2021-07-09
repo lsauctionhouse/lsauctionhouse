@@ -2,10 +2,12 @@
 
 <head>
 	<title>LS Auction House</title>
+	
 	<!--
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="skeleton.css">
 	-->
+
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -40,13 +42,14 @@
 						<span>La vente se déroulera à partir de 21h, au vignoble Marlowe. L'accueil des invités se fera
 							dès 20h30. Quelques verres vous seront offerts avant et pendant l'événement et une soirée se
 							déroulera sur les lieux à la fin des ventes. Les règles des ventes vous seront exposés sur
-							place.</span>
+							place.
+						</span>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<table class="striped">
+		<table class="highlight">
 			<thead>
 				<tr>
 					<th>Lot</th>
@@ -79,8 +82,7 @@
 				</tr>
 				<tr>
 					<td>Faction Custom</td>
-					<td>Grosse cylindrée performante, tres à l'aise sur toutes les routes, 4 portes, <em>Full Perf +
-							Blindage 2</em> </td>
+					<td>Grosse cylindrée performante, tres à l'aise sur toutes les routes, 4 portes, <em>Full Perf + Blindage 2</em> </td>
 					<td>20000 $</td>
 					<td>Al Dan</td>
 				</tr>
@@ -92,8 +94,7 @@
 				</tr>
 				<tr>
 					<td>Zombie Chopper</td>
-					<td>Une moto chopper iconique avec un gros moteur et son ronronement des plus agréables, <em>Full
-							Perf</em> </td>
+					<td>Une moto chopper iconique avec un gros moteur et son ronronement des plus agréables, <em>Full Perf</em> </td>
 					<td>52000 $</td>
 					<td><i>Anonyme</i></td>
 				</tr>
@@ -112,9 +113,10 @@
 							<i class="material-icons medium">info</i>
 						</div>
 						<div class="col">
-							<span class="white-text">Pour inscrire un lot, contactez Marek en précisant la nature du
-								lot, une brève description et un prix de départ. Vous serez ensuite recontacté pour
-								discuter de votre lot.</span>
+							<span class="white-text">Pour inscrire un lot, 
+								contactez Marek en précisant la nature du lot, 
+								une brève description et un prix de départ. 
+								Vous serez ensuite recontacté pour discuter de votre lot.</span>
 						</div>
 					</div>
 				</div>
@@ -129,12 +131,10 @@
 					<div class="card-content black-text">
 						<span class="card-title">Calculateur</span>
 						<span>Entrez le prix final estimé pour connaitre le taux de commission.</span><br>
-						<span>Le pourcentage est dégressif de 8% à 2% en fonction du prix de vente. Il s'agit d'un
-							pourcentage indicatif, qui peut être réévalué et négocié.</span>
+						<span>Le pourcentage est dégressif de 8% à 2% en fonction du prix de vente. Il s'agit d'un pourcentage indicatif, qui peut être réévalué et négocié.</span>
 					</div>
 					<div class="card-action">
-						<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000"
-								oninput="vchange(this)" /></div>
+						<div><label>Prix de vente ($)</label><input type="number" value="20000" placeholder="20000" oninput="vchange(this)" /></div>
 						<div><label>Pourcentage</label><input id="percent" disabled placeholder="8 %" /></div>
 						<div><label>Commission</label><input id="commission" disabled placeholder="1600 $" /></div>
 					</div>
