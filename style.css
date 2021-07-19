@@ -31,5 +31,10 @@ label {
 	  color: #333;
   }
 
+.check {
+	border-radius: 2px;
+	margin-left: 10px;
+}
 
-
+.uheight {
+	line-height: 8px;}
