@@ -252,12 +252,12 @@
 			let minprice = 20000;
 			let maxprice = 200000;
 			let minper = 8;
-			let maxper = 2.5;
+			let maxper = 2;
 			let clampprice = clamp(price, minprice, maxprice);
 			let new_value = ((clampprice - minprice) / (maxprice - minprice)) * (maxper - minper) + minper;
 			new_value = new_value.toFixed(1)
 
-			document.getElementById("percent").value = new_value + " %";
+		//	document.getElementById("percent").value = new_value + " %";
 			document.getElementById("commission").value = ((new_value / 100) * price).toFixed(0) + " $";
 		};
 
